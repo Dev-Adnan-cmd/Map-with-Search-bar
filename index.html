@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indian Map</title>
+    <style>
+        #map {
+            height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .place-name {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Map With a Search Functionality</h1>
+        <div class="search-container">
+            <label for="location">Select your location:</label>
+            <select name="location" id="location">
+                <option value="New Delhi">New Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Bengaluru">Bengaluru</option>
+            </select>
+            <button onclick="search()">Search</button>
+        </div>
+    </div>
+    <br>
+    <div id="map">
+        <div id="place-name" class="place-name"></div>
+    </div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMx4GVQpvu2ylwjQc0a3y6V-qZwwr1VCk&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
